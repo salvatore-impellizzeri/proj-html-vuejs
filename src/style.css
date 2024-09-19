@@ -42,7 +42,6 @@ body h3, body h2{
   transition: background 0.2s ease-in-out;
 }
 
-
 .rose-button:hover{
   box-shadow: 0 0 45px #1caed791;
 }

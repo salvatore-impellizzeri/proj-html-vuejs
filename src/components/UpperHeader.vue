@@ -29,6 +29,7 @@ export default {
           href:"#",
         },
       ],
+      active: 0,
     }
   }
 }
@@ -51,7 +52,9 @@ export default {
         <div class="col-6 d-flex justify-content-end align-items-center">
             <ul class="d-flex gap-5 m-0 p-0">
                 <li v-for="(link, i) in links" :key="i">
-                    <a href="#" class="text-white">{{ link.label }}</a>
+                    <a href="#" class="text-white" :class="{ active: i === active }">
+                      {{ link.label }}
+                    </a>
                 </li>
             </ul>
 
@@ -79,7 +82,11 @@ export default {
             font-family: 'Roboto';
         }
     }
+}
 
+.active{
+  font-weight: bold;
+  color: #F9636B !important;
 }
 
 
