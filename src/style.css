@@ -31,6 +31,7 @@ body h3, body h2{
 
 .blue-button:hover{
   background: linear-gradient(to left, #F8626B, #B5246E);
+  box-shadow: 0 0 45px #b6246d91;
 }
 
 .rose-button{
@@ -41,8 +42,18 @@ body h3, body h2{
   transition: background 0.2s ease-in-out;
 }
 
+
+.rose-button:hover{
+  box-shadow: 0 0 45px #1caed791;
+}
+
 .rose-button-normal{
   background: linear-gradient(to left, #F8626B, #B5246E);
+}
+
+.rose-button-normal:hover{
+  box-shadow: 0 0 45px #1caed791;
+  background: linear-gradient(to right, #03A5D2, #213D82);
 }
 
 .rose-button-reverse{
@@ -76,4 +87,18 @@ body h3, body h2{
 
 img{
   max-width: 100%;
+}
+
+h3, .big-titles{
+  letter-spacing: -1px;
+  font-size: 60px !important;
+  font-family: 'Heebo', sans-serif !important;
+}
+
+.blue-p{
+  font-family: 'Raleway', sans-serif !important;
+  color: #03A7D3E6;
+  font-size: 17px;
+  width: 70%;
+  margin: 45px 0 55px;
 }

@@ -1,7 +1,6 @@
 <script>
 import SectionCards from './SectionCards.vue';
 
-
 export default {
   data() {
     return {
@@ -64,13 +63,8 @@ export default {
 }
 
 .rose-button{
-  box-shadow: 0 0 45px #b6246d91;
   border-radius: 30px;
   padding: 15px 50px;
-}
-
-.rose-button:hover{
-  box-shadow: 0 0 45px #1caed791;
 }
 
 </style>
