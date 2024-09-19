@@ -27,10 +27,8 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped>
-@use 'assets/scss/main.scss' as *;
+<style lang="scss">
 @import "bootstrap/scss/bootstrap";
-
 
 
 </style>
