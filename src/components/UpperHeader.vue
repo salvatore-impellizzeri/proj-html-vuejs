@@ -50,17 +50,16 @@ export default {
 
         <div class="col-6 d-flex justify-content-end align-items-center">
             <ul class="d-flex gap-5 m-0 p-0">
-                <li class="text-white" v-for="(link, i) in links" :key="i">
-                    {{ link.label }}
+                <li v-for="(link, i) in links" :key="i">
+                    <a href="#" class="text-white">{{ link.label }}</a>
                 </li>
             </ul>
 
-            <!-- SIGN IN -->
-
-            <button class="ms-5">
-                Sign In
-            </button>
-
+            <!-- SIGN IN BUTTON -->
+              <button class="blue-button ms-5">
+                  Sign In
+              </button>
+              
         </div>
     </div>
   </div>
@@ -79,16 +78,9 @@ export default {
             list-style: none;
             font-family: 'Roboto';
         }
-
-        button{
-            color: white;
-            border-radius: 20px;
-            border: none;
-            padding: 9px 30px;
-            background: linear-gradient(to right, #03A5D2, #213D82);
-        }
     }
 
 }
+
 
 </style>

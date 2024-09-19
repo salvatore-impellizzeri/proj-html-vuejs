@@ -8,6 +8,44 @@ body{
   font-family: 'Open Sans', sans-serif !important;
 }
 
-body h3{
+a{
+  text-decoration: none !important;
+}
+
+body h3, body h2{
   font-family: 'Heebo', sans-serif !important;
+}
+
+.button-container{
+  background-image: linear-gradient(to right, #03A5D2, #213D82);
+  transition: opacity 2s ease-in-out;
+}
+
+.blue-button{
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 9px 30px;
+  background: linear-gradient(to right, #03A5D2, #213D82);
+}
+
+.blue-button:hover{
+  background: linear-gradient(to left, #F8626B, #B5246E);
+}
+
+.rose-button{
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 9px 30px;
+  transition: background 0.2s ease-in-out;
+  background: linear-gradient(to left, #F8626B, #B5246E);
+}
+
+.rose-button:hover{
+  background: linear-gradient(to right, #03A5D2, #213D82);
+}
+
+.color-red{
+  color: #F9636B;
 }
