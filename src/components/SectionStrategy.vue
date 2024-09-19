@@ -1,14 +1,16 @@
 <script>
-import TwoButtons from './TwoButtons.vue';
+import { store } from '../store.js';
+import TextComp from './TextComp.vue';
 
 export default {
   data() {
     return {
-      
+      store,
     }
   },
+
   components:{
-    TwoButtons,
+    TextComp,
   }
 }
 </script>
@@ -17,34 +19,28 @@ export default {
   <div class="container-strategy m-auto">
     <div class="row px-0">
 
-      <!-- LEFT SIDE -->
-
-      <div class="col-6 pe-5 d-flex justify-content-center">
+      <!-- IMG -->
+       
+      <div class="col-6">
+        <div class=" d-flex justify-content-center">
           <div class="img-container">
-              <img class="top-img" src="../../src/assets/img/men-data.png" alt="">
-              <img class="bg-img" src="../../src/assets/img/nemoodar.png" alt="">
+              <img class="top-img" src="../assets/img/men-data.png" alt="">
+              <img class="bg-img" src="../assets/img/nemoodar.png" alt="">
           </div>
+        </div>
       </div>
 
-      <!-- RIGHT SIDE -->
+      <!-- TEXT -->
 
-      <div class="col-6 ps-5 text-white">
+      <div class="col-6 text-white ps-5">
         <p class="fw-semibold mb-4">Start Your Project</p>
-        <div class="big-titles">
-          <h3 class="fw-bolder">Grow Your Business</h3>
-          <h3 class="fw-normal">With Our Strategy</h3>
-        </div>
-
-        <p class="blue-p">When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface .of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary,</p>
-        
-        <!-- BUTTONS RIGHT SIDE -->
-
-        <div>
-          <TwoButtons />
-        </div>
+        <TextComp 
+          :firstTitle="store.textImg[0].strategy.text[0].firstBigText"
+          :secondTitle="store.textImg[0].strategy.text[0].secondBigText"
+          :thirdTitle="store.textImg[0].strategy.text[0].thirdBigText"
+          :par="store.textImg[0].strategy.text[0].paragraph"
+          />
       </div>
-
-
     </div>
   </div>
 </template>
@@ -52,12 +48,12 @@ export default {
 <style lang="scss" scoped>
 
 .container-strategy{
-  width: 65%;
+  width: 70%;
   padding: 180px 0 105px;
 }
 
 .img-container{
-  width: 55%;
+  width: 50%;
   position: relative;
 }
 
