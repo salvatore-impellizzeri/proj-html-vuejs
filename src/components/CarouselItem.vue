@@ -70,6 +70,7 @@ export default {
     padding: 90px 0 40px;
 
     .container-item{
+        cursor: grab;
         border-radius: 30px;
         box-shadow: 0px 10px 40px #bdbdbd77;
         transition: all 0.2s ease-in-out;
