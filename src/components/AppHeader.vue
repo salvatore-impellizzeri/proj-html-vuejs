@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-color">
+  <div class="bg-blue">
     <div>
       <UpperHeader />
     </div>
@@ -28,10 +28,5 @@ export default {
 </template>
 
 <style scoped>
-
-.bg-color{
-  background: linear-gradient(#0B1953, #01012F);
-  min-height: 600px;
-}
 
 </style>

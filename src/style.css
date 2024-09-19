@@ -39,13 +39,41 @@ body h3, body h2{
   border: none;
   padding: 9px 30px;
   transition: background 0.2s ease-in-out;
+}
+
+.rose-button-normal{
   background: linear-gradient(to left, #F8626B, #B5246E);
 }
 
-.rose-button:hover{
-  background: linear-gradient(to right, #03A5D2, #213D82);
+.rose-button-reverse{
+  background: linear-gradient(to right, #F8626B, #B5246E);
+}
+
+.rose-button-reverse:hover{
+  background: linear-gradient(to left, #03A5D2, #213D82);
+}
+
+.rose-button-45{
+  background: linear-gradient(-45deg, #F8626B, #B5246E);
+}
+
+.rose-button-45:hover{
+  background: linear-gradient(125deg, #03A5D2, #213D82);
 }
 
 .color-red{
   color: #F9636B;
+}
+
+.bg-blue{
+  background: linear-gradient(#0B1953, #01012F);
+  min-height: 600px;
+}
+
+.my-bg-white{
+  background-color: white;
+}
+
+img{
+  max-width: 100%;
 }

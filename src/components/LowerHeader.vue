@@ -25,7 +25,7 @@ export default {
             <!-- BUTTONS LEFT-SIDE -->
 
             <div class="d-flex gap-3">
-                <button class="rose-button">Try It Now</button>
+                <button class="rose-button-reverse rose-button">Try It Now</button>
                 <button class="blue-button">Explore More</button>
             </div>
 

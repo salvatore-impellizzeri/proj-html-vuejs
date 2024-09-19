@@ -31,11 +31,17 @@ export default {
 </script>
 
 <template> 
-  <div class="text-center container-cards row">
+  <div class="text-center container-cards p-0 row">
     <div class="col-3 single-card p-0" v-for="(card, i) in cards" :key="i">
+
+        <!-- IMAGE -->
+
         <div class="img-container m-auto mb-5">
             <img :src="card.img" alt="">
         </div>
+
+        <!-- TEXT -->
+
         <div class="box-text-card">
             <h2 class="fw-bold fs-3 mb-4">
                 {{ card.title }}
@@ -44,6 +50,13 @@ export default {
                 {{ card.description }}
             </p>
         </div>
+
+        <!-- BUTTON -->
+
+        <button class="arrow-button rose-button-normal">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        
     </div>
   </div>
 </template>
@@ -84,6 +97,22 @@ export default {
                 width: 70%;
             }
         }
+
+        .arrow-button{
+            border: 0;
+            opacity: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            padding: 10px;
+            color: white;
+            transform: translate(0, -50%);
+            transition: all 0.4s ease-in-out;
+
+            .fa-arrow-right{
+                font-size: 20px;
+            }
+        }
     }
 }
 
@@ -95,6 +124,10 @@ export default {
 .single-card:hover .box-text-card{
     background: linear-gradient(#183271, #020231);
     color: white;
+}
+
+.single-card:hover .arrow-button{
+    opacity: 1;
 }
 
 </style>

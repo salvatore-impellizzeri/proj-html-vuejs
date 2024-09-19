@@ -33,9 +33,16 @@ export default {
 
     <!-- CARDS -->
 
-    <div class="row w-75 m-auto">
+    <div class="w-75 m-auto">
         <SectionCards />
     </div>
+
+    <!-- BUTTON -->
+
+    <div class="w-100 d-flex justify-content-center">
+      <button class="rose-button rose-button-45 justify-content-center">View All Services</button>
+    </div>
+    
   </div>
 </template>
 
@@ -54,6 +61,16 @@ export default {
         letter-spacing: -2px;
         font-family: 'Heebo', sans-serif;
     }
+}
+
+.rose-button{
+  box-shadow: 0 0 45px #b6246d91;
+  border-radius: 30px;
+  padding: 15px 50px;
+}
+
+.rose-button:hover{
+  box-shadow: 0 0 45px #1caed791;
 }
 
 </style>
