@@ -48,23 +48,26 @@ export default {
 <style lang="scss" scoped>
 
 .container-service{
-    padding: 80px 0;
+  p{
+      font-size: 16px;
+  }
 
-    p{
-        font-size: 16px;
-    }
-
-    .giant-text{
-        font-size: 50px;
-        color: black;
-        letter-spacing: -2px;
-        font-family: 'Heebo', sans-serif;
-    }
+  .giant-text{
+      font-size: 50px;
+      color: black;
+      letter-spacing: -2px;
+      font-family: 'Heebo', sans-serif;
+  }
 }
 
 .rose-button{
   border-radius: 30px;
   padding: 15px 50px;
+  box-shadow: 0 0 45px #b6246d91;
+}
+
+.rose-button:hover{
+  box-shadow: 0 0 45px #1caed791;
 }
 
 </style>

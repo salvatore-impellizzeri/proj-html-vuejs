@@ -1,4 +1,5 @@
 <script>
+import SectionPortfolio from './SectionPortfolio.vue';
 import SectionService from './SectionService.vue';
 import SectionStrategy from './SectionStrategy.vue';
 
@@ -12,6 +13,7 @@ export default {
   components:{
     SectionService,
     SectionStrategy,
+    SectionPortfolio,
   }
 }
 </script>
@@ -23,6 +25,9 @@ export default {
     </div>
     <div class="bg-blue">
       <SectionStrategy />
+    </div>
+    <div class="my-bg-white">
+      <SectionPortfolio />
     </div>
   </div>
 </template>

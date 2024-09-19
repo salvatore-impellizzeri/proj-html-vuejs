@@ -60,6 +60,7 @@ body h3, body h2{
 }
 
 .rose-button-reverse:hover{
+  box-shadow: 0 0 45px #1caed791;
   background: linear-gradient(to left, #03A5D2, #213D82);
 }
 
@@ -68,6 +69,7 @@ body h3, body h2{
 }
 
 .rose-button-45:hover{
+  box-shadow: 0 0 45px #1caed791;
   background: linear-gradient(125deg, #03A5D2, #213D82);
 }
 
@@ -75,18 +77,9 @@ body h3, body h2{
   color: #F9636B;
 }
 
-.bg-blue{
-  background: linear-gradient(#0B1953, #01012F);
-  min-height: 600px;
-}
-
-.my-bg-white{
-  background-color: white;
-}
-
-img{
+/* img{
   max-width: 100%;
-}
+} */
 
 h3, .big-titles{
   letter-spacing: -1px;

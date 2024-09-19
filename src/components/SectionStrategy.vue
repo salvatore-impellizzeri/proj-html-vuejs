@@ -57,6 +57,10 @@ export default {
   position: relative;
 }
 
+img{
+  max-width: 100%;
+}
+
 .top-img{
   z-index: 1;
   position: relative;
