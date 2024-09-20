@@ -31,7 +31,7 @@ export default {
     <div class="my-bg-white">
       <SectionPortfolio />
     </div>
-    <div class="bg-blue-right">
+    <div class="bg-blue-right pb-0 index">
       <SectionPrice />
     </div>
   </div>
@@ -39,5 +39,9 @@ export default {
 
 <style scoped>
 
+.index{
+  position: relative;
+  z-index: -3;
+}
 
 </style>

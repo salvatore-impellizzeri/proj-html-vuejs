@@ -12,13 +12,12 @@ body{
 
 .my-bg-blue{
   background: linear-gradient(#0B1953, #01012F);
-  min-height: 600px;
 }
 
 .bg-blue-right{
   padding: 80px 0 60px;
   background: linear-gradient(to right, #0B1953, #01012F);
-  min-height: 600px;
+  max-height: 700px;
 }
 
 .my-bg-white{
@@ -81,10 +80,10 @@ h3, .big-titles{
     border: none;
     padding: 9px 30px;
     transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 30px #b6246d62;
   }
   
   .rose-button:hover{
-    background: linear-gradient(to right, #03A5D2, #213D82);
     box-shadow: 0 0 45px #1caed791;
   }
   
@@ -127,3 +126,19 @@ h3, .big-titles{
   background: linear-gradient(125deg, #03A5D2, #213D82);
 }
 
+.rose-button-top{
+  background: linear-gradient(to top, #F8626B, #B5246E);
+}
+
+.rose-button-top:hover{
+  background: linear-gradient(to bottom, #03A5D2, #213D82);
+}
+
+.white-button{
+  background-color: white !important;
+  color: #F8626B;
+  border-radius: 30px;
+  border: none;
+  padding: 9px 30px;
+  transition: all 0.2s ease-in-out;
+}
