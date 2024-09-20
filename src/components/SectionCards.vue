@@ -64,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 
 .container-cards{
-    margin: 90px auto;
+    margin: auto;
     width: 77%;
 
     .single-card{

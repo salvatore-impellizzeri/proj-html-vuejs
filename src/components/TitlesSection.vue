@@ -17,14 +17,14 @@ export default {
 </script>
 
 <template>  
-    <div class="m-auto container-titles">
+    <div class="container-titles">
         <p class="color-red fw-medium mb-1">
             {{ red }}
         </p>
         <span class="giant-text">
             <span class="fw-bold">{{ bold }}</span> {{ medium }}
         </span>
-        <p>
+        <p class="w-25 m-auto">
             {{ smaller }}
         </p>
     </div>
@@ -33,6 +33,7 @@ export default {
 <style lang="scss">
 
 .container-titles{
+    margin: 0 auto 90px;
   p{
       font-size: 16px;
   }

@@ -67,7 +67,7 @@ export default {
 
 .conteiner-all-items{
     overflow-x: visible;
-    padding: 90px 0 40px;
+    padding-bottom: 40px;
 
     .container-item{
         cursor: grab;

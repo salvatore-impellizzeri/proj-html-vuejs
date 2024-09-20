@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-blue">
+  <div class="my-bg-blue">
     <div>
       <UpperHeader />
     </div>
