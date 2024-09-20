@@ -1,14 +1,17 @@
 <script>
 import SectionCards from './SectionCards.vue';
+import TitlesSection from './TitlesSection.vue';
+import { store } from '../store.js';
 
 export default {
   data() {
     return {
-      
+      store,
     }
   },
   components:{
     SectionCards,
+    TitlesSection,
   }
 }
 </script>
@@ -18,16 +21,12 @@ export default {
 
     <!-- TITLES -->
 
-    <div class="w-25 m-auto container-titles text-center">
-        <p class="color-red fw-medium mb-1">
-            Our Services
-        </p>
-        <span class="giant-text">
-            <span class="fw-bold">What</span> We Do
-        </span>
-        <p>
-            When, while the lovely valley teems with vapour around meand the
-        </p>
+    <div>
+      <TitlesSection class="text-center"
+      :red="store.titles[0].red"
+      :bold="store.titles[0].bigger.bold"
+      :medium="store.titles[0].bigger.medium"
+      :smaller="store.titles[0].smaller" />
     </div>
 
     <!-- CARDS -->
@@ -38,7 +37,7 @@ export default {
 
     <!-- BUTTON -->
 
-    <div class="w-100 d-flex justify-content-center">
+    <div class="w-100 d-flex justify-content-center mb-4">
       <button class="rose-button rose-button-45 justify-content-center">View All Services</button>
     </div>
     
@@ -46,19 +45,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
-.container-service{
-  p{
-      font-size: 16px;
-  }
-
-  .giant-text{
-      font-size: 50px;
-      color: black;
-      letter-spacing: -2px;
-      font-family: 'Heebo', sans-serif;
-  }
-}
 
 .rose-button{
   border-radius: 30px;

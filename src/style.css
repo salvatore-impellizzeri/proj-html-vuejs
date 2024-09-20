@@ -8,6 +8,8 @@ body{
   font-family: 'Open Sans', sans-serif !important;
 }
 
+/* GENERAL SELECTOR */
+
 a{
   text-decoration: none !important;
 }
@@ -16,35 +18,69 @@ body h3, body h2{
   font-family: 'Heebo', sans-serif !important;
 }
 
-.button-container{
-  background-image: linear-gradient(to right, #03A5D2, #213D82);
-  transition: opacity 2s ease-in-out;
+h3, .big-titles{
+  letter-spacing: -1px;
+  font-size: 60px !important;
+  font-family: 'Heebo', sans-serif !important;
 }
 
-.blue-button{
-  color: white;
-  border-radius: 20px;
-  border: none;
-  padding: 9px 30px;
-  background: linear-gradient(to right, #03A5D2, #213D82);
+/* PARAGRAFI */
+
+.color-red{
+  color: #F9636B;
 }
 
-.blue-button:hover{
-  background: linear-gradient(to left, #F8626B, #B5246E);
-  box-shadow: 0 0 45px #b6246d91;
+.blue-p{
+  font-family: 'Raleway', sans-serif !important;
+  color: #03A7D3E6;
+  font-size: 17px;
+  width: 70%;
+  margin: 45px 0 55px;
 }
 
-.rose-button{
-  color: white;
-  border-radius: 20px;
-  border: none;
-  padding: 9px 30px;
-  transition: background 0.2s ease-in-out;
-}
+/* BUTTONS */
 
-.rose-button:hover{
-  box-shadow: 0 0 45px #1caed791;
-}
+  /* BLUE */
+
+  .blue-button{
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 9px 30px;
+    background: linear-gradient(to right, #03A5D2, #213D82);
+  }
+
+  .blue-button:hover{
+    background: linear-gradient(to left, #F8626B, #B5246E);
+    box-shadow: 0 0 45px #b6246d91;
+  }
+
+  /* ROSE */
+
+  .rose-button{
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 9px 30px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .rose-button:hover{
+    background: linear-gradient(to right, #03A5D2, #213D82);
+    box-shadow: 0 0 45px #1caed791;
+  }
+  
+  .rose-button-no-shadow{
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 9px 30px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .rose-button-no-shadow{
+    background: linear-gradient(to right, #03A5D2, #213D82);
+  }
 
 .rose-button-normal{
   background: linear-gradient(to left, #F8626B, #B5246E);
@@ -73,24 +109,3 @@ body h3, body h2{
   background: linear-gradient(125deg, #03A5D2, #213D82);
 }
 
-.color-red{
-  color: #F9636B;
-}
-
-/* img{
-  max-width: 100%;
-} */
-
-h3, .big-titles{
-  letter-spacing: -1px;
-  font-size: 60px !important;
-  font-family: 'Heebo', sans-serif !important;
-}
-
-.blue-p{
-  font-family: 'Raleway', sans-serif !important;
-  color: #03A7D3E6;
-  font-size: 17px;
-  width: 70%;
-  margin: 45px 0 55px;
-}

@@ -48,5 +48,48 @@ export const store = reactive({
                 ] 
             }
         },
+    ],
+    
+    titles:[
+        {
+            red: "OurServices",
+            bigger:{
+                bold: "What",
+                medium: "We Do",
+            },
+            smaller: "When, while the lovely valley teems with vapour around meand the",
+        },
+        {
+            red: "Portfolio",
+            bigger:{
+                bold: "latest",
+                medium: "work",
+            },
+            smaller: "",
+        },
+        {
+            red: "Price List",
+            bigger:{
+                bold: "What",
+                medium: "Our Pricing",
+            },
+            smaller: "When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface .",
+        },
+        {
+            red: "Blog",
+            bigger:{
+                bold: "Latest",
+                medium: "Posts",
+            },
+            smaller: "When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface .",
+        },
+        {
+            red: "Testimonial",
+            bigger:{
+                bold: "What",
+                medium: "People Say",
+            },
+            smaller: "When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surface .",
+        },
     ]
 });

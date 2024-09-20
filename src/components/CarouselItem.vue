@@ -40,7 +40,7 @@ export default {
 </script>
 
 <template> 
-  <div class="d-flex gap-5 conteiner-all-items">
+  <div class="d-flex gap-5 conteiner-all-items w-75 m-auto">
     <div class="container-item" v-for="(work, i) in works" :key="i">
         <div class="img-container">
             <a href="">
@@ -66,7 +66,7 @@ export default {
 <style lang="scss">
 
 .conteiner-all-items{
-    overflow-x: hidden;
+    overflow-x: visible;
     padding: 90px 0 40px;
 
     .container-item{
