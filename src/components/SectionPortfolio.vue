@@ -7,7 +7,9 @@ import { store } from '../store.js';
 export default {
   data() {
     return {
-      store
+      store,
+      currentIndex: 0,
+      cardWidth: 560,
     }
   },
 
@@ -15,12 +17,24 @@ export default {
     CarouselItem,
     BallCarousel,
     TitlesSection
+  },
+
+  methods:{
+    NextSlide(){
+      if(this.currentIndex < 2){
+        this.currentIndex++;
+      }
+    },
+    PrevSlide(){
+      if(this.currentIndex > 0)
+      this.currentIndex--;
+    }
   }
 }
 </script>
 
 <template> 
-  <div class="w-100">
+  <div class="w-100 section-container">
     <div class="row w-75 m-auto">
 
       <!-- TITLES -->
@@ -35,11 +49,11 @@ export default {
 
       <!-- BUTTONS CAROUSEL -->
 
-      <div class="col-6 justify-content-end gap-4 d-flex align-items-center">
-        <button class="button-carousel-left">
+      <div class="col-6 justify-content-end buttons-carousel d-flex align-items-center">
+        <button @click="PrevSlide()" class="button-carousel-left">
           <span class="arrow">&LeftArrow;</span>
         </button>
-        <button class="button-carousel-right">
+        <button @click="NextSlide()" class="button-carousel-right">
           <span class="arrow">
             &RightArrow;
           </span>
@@ -49,8 +63,10 @@ export default {
 
     <!-- CAROUSEL -->
 
-    <div>
-      <CarouselItem />
+    <div class="w-100">
+      <CarouselItem 
+        :currentIndex="currentIndex" 
+        :cardWidth="cardWidth"/>
     </div>
     <div>
       <BallCarousel />
@@ -60,6 +76,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+.section-container{
+  overflow-x: hidden;
+}
+
+.buttons-carousel{
+  gap: 40px;
+}
 
 .button-carousel-left, .button-carousel-right{
   width: 50px;

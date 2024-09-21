@@ -33,14 +33,15 @@ export default {
     }
   },
 
-  components: {
-
-  }
+  props: {
+    currentIndex: Number,
+    cardWidth: Number,
+  },
 }
 </script>
 
 <template> 
-  <div class="d-flex gap-5 conteiner-all-items w-75 m-auto">
+  <div class="d-flex gap-5 conteiner-all-items w-75 m-auto" :style="{ transition:`all 0.15s ease-in-out`, transform: `translateX(-${currentIndex * cardWidth}px)`}">
     <div class="container-item" v-for="(work, i) in works" :key="i">
         <div class="img-container">
             <a href="">
@@ -131,11 +132,15 @@ export default {
 
     .container-item::before {
         background: linear-gradient(to left, #F8626B, #B5246E);
-        opacity: 1;
+        opacity: 0;
     }
 
     .container-item:hover::after{
         opacity: 0;
+    }
+
+    .container-item:hover::before{
+        opacity: 1;
     }
 
     .container-item:hover h2{
