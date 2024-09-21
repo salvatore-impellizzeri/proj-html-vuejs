@@ -36,9 +36,9 @@ export default {
 
 <template>
     <div class="container-upper-footer">
-        <!-- <div class="">
-            <SubscribeFooter />
-        </div> -->
+        <div>
+            <SubscribeFooter class="sub-box"/>
+        </div>
         <div class="row">
 
             <!-- COMPANY INFO -->
@@ -121,6 +121,15 @@ export default {
 
 .container-upper-footer{
     padding: 250px 0 100px;
+    position: relative;
+
+    .sub-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%)
+    }
 
     .company-info{
         p{
@@ -141,10 +150,6 @@ export default {
     li{
         font-family: 'Roboto';
         color: rgba(255, 255, 255, 0.479);
-    }
-
-    h5{
-        font-family: 'Heebo';
     }
 
     li:hover{

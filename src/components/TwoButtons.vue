@@ -15,7 +15,7 @@ export default {
 <template> 
   <div>
     <div class="d-flex gap-3">
-        <button class="rose-button-normal rose-button">
+        <button class="rose-button-normal rose-button-no-shadow">
           <span>
             Try It Now
           </span>

@@ -150,8 +150,10 @@ export default {
             <!-- BUTTON -->
 
             <button :class="{'white-button': i === 1, 'rose-button rose-button-top': i !== 1}">
-                <span class="fw-bold">Order Now</span>
-                <i class="fas fa-long-arrow-alt-right"></i> 
+                <span class="fw-bold">
+                    Order Now
+                    <i class="fas fa-long-arrow-alt-right" :class="i === 1 ? 'text-rose' : 'text-white'"></i> 
+                </span>
             </button>
             
         </div>
@@ -245,6 +247,10 @@ export default {
         }
     
     }
+}
+
+.text-rose{
+    color: #F8626B !important;
 }
 
 .family{
