@@ -28,6 +28,9 @@ export default {
     PrevSlide(){
       if(this.currentIndex > 0)
       this.currentIndex--;
+    },
+    updateIndex(index) {
+      this.currentIndex = index;
     }
   }
 }
@@ -69,7 +72,10 @@ export default {
         :cardWidth="cardWidth"/>
     </div>
     <div>
-      <BallCarousel />
+      <BallCarousel 
+      @updateIndex="updateIndex"
+      :currentIndex="currentIndex" 
+      :cardWidth="cardWidth"/>
     </div>
 
   </div>
