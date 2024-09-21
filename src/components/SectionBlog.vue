@@ -1,7 +1,7 @@
 <script>
 import TitlesSection from './TitlesSection.vue';
-import { store } from '../store.js';
 import BlogCards from './BlogCards.vue';
+import { store } from '../store.js';
 
 export default {
   data() {
@@ -35,13 +35,14 @@ export default {
     <div>
         <BlogCards />
     </div>
+    
   </div>
 </template>
 
 <style lang="scss" scoped>
 
 .container-blog{
-    transform: translate(0, 500px);
+    transform: translate(0, 400px);
 }
 
 </style>

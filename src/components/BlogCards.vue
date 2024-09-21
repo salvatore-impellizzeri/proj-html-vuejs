@@ -37,23 +37,24 @@ export default {
 
 <template> 
   <div class="row container-all-cards m-auto justify-content-center gap-5">
-    <div :class="i === 0 ? 'col-4 row' : 'col-2'"
-      class="text-white container-card bg-blue-315"
+    <div :class="i === 0 ? 'col-4 row align-items-end ps-5 pe-3 bg-img-dark' : 'col-2 bg-blue-315'"
+      class="text-white container-card"
       v-for="(card, i) in cards"
-      :key="i"
-      :style="i === 0 ? { backgroundImage: `url(${card.image})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}" >
-        <div :class="i === 0 ? 'col-6' : ''">
-            <p>
+      :key="i">
+        <div :class="i === 0 ? 'col-8' : ''">
+            <p :class="i === 0 ? 'mb-3' : ''">
                 {{ card.date }} <span class="mx-2">&bull;</span> by {{ card.person }}
             </p>
-            <h2 class="fw-bold fs-5 mb-4">
-                {{ card.title }}
-            </h2>
-            <p>
+            <a href="">
+                <h2 class="fw-bold fs-5 text-white" :class="i === 0 ? 'mb-3' : 'mb-4'">
+                    {{ card.title }}
+                </h2>
+            </a>
+            <p :class="i === 0 ? 'mb-0' : ''">
                 {{ card.description }}
             </p>
         </div>
-        <div>
+        <div :class="i === 0 ? 'col-4 d-flex justify-content-end' : ''">
             <button class="white-button-hover">
                 <span>
                     Read More
@@ -71,6 +72,11 @@ export default {
     .container-card{
         border-radius: 30px;
         padding: 70px 55px 30px;
+        transition: all 0.4s ease-in-out;
+
+        &:hover{
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.281);
+        }
 
         p:first-child{
             margin-bottom: 40px;
@@ -80,6 +86,30 @@ export default {
             margin-bottom: 60px;
         }
     }
+}
+
+.bg-img-dark{
+    background: transparent;
+}
+
+.bg-img-dark{
+    position: relative;
+}
+
+.bg-img-dark::before{
+    z-index: -1;
+    content: '';
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/headway-537308-unsplash-1380x703.jpg');
+    background-size: cover;
+    filter: brightness(0.7);
 }
 
 </style>
