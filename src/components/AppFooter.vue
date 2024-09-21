@@ -17,11 +17,12 @@ export default {
 </script>
 
 <template>
-  <div class="container-footer">
-    <div>
+  <div>
+    <div class="footer-set">
       <UpperFooter />
     </div>
-    <div>
+    <hr>
+    <div class="footer-set">
       <LowerFooter />
     </div>
   </div>
@@ -29,9 +30,13 @@ export default {
 
 <style scoped>
 
-.container-footer{
+.footer-set{
     width: 65%;
     margin: auto;
 }
 
+hr{
+    height: 1px;
+    color: rgba(128, 128, 128, 0.479);
+}
 </style>

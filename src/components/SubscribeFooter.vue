@@ -24,15 +24,15 @@ export default {
         </p>
     </div>
     <div class="col-5">
-        <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Enter Your Email Address" required aria-describedby="button-addon2">
-            <button class="blue-button" type="button">
+        <form class="input-group mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Enter Your Email Address" required aria-describedby="button-addon2">
+            <button class="blue-button" type="submit">
                 <span>
                     Subscribe
                 </span>
             </button>
             </input>
-        </div>
+        </form>
     </div>
   </div>
 </template>
@@ -53,7 +53,7 @@ export default {
 
         input{
             border-radius: 40px !important;
-            padding: 20px 50px;
+            padding: 20px 160px 20px 50px;
             position: relative;
             z-index: 0;
         }
