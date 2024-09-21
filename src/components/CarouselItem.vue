@@ -70,12 +70,15 @@ export default {
     padding-bottom: 40px;
 
     .container-item{
+        position: relative;
         cursor: grab;
         border-radius: 30px;
         box-shadow: 0px 10px 40px #bdbdbd77;
         transition: all 0.2s ease-in-out;
     
         .img-container{
+            position: relative;
+            z-index: 1;
             border-radius: 30px;
             
             img{
@@ -84,23 +87,55 @@ export default {
             }
         }
 
-        h2{
-            color: black;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 25px 30px;
-            transition: all 0.2s ease-in-out;
-        }
+        .text-box{
+            position: relative;
+            z-index: 1;
 
-        p{
-            font-weight: 200;
-            color: #AAAAAA;
-            padding-right: 30px;
+            h2{
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 25px 30px;
+                transition: all 0.2s ease-in-out;
+            }
+    
+            p{
+                font-weight: 200;
+                color: #AAAAAA;
+                padding-right: 30px;
+                transition: all 0.2s ease-in-out;
+            }
         }
     }
 
-    .container-item:hover {
+    .container-item::before,
+    .container-item::after{
+        z-index: 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .container-item::after {
+        background: white;
+        opacity: 1;
+    }
+
+    .container-item::before {
         background: linear-gradient(to left, #F8626B, #B5246E);
+        opacity: 1;
+    }
+
+    .container-item:hover::after{
+        opacity: 0;
     }
 
     .container-item:hover h2{

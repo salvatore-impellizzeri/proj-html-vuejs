@@ -57,7 +57,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .button-carousel-left, .button-carousel-right{
   width: 50px;

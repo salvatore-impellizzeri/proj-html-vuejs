@@ -71,6 +71,7 @@ export default {
         position: relative;
 
         .img-container{
+            z-index: 1;
             position: absolute;
             top: 0;
             left: 0;
@@ -87,6 +88,7 @@ export default {
         }
         
         .box-text-card{
+            position: relative;
             color: #000000D4;
             margin-top: calc(238px / 2);
             padding: 150px 0 70px;
@@ -95,6 +97,7 @@ export default {
     
             .desc{
                 width: 70%;
+                background-color: transparent;
             }
         }
 
@@ -121,8 +124,46 @@ export default {
     box-shadow: 0px 0px 40px rgba(111, 113, 141, 0.411);
 }
 
-.single-card:hover .box-text-card{
+.box-text-card::after,
+.box-text-card::before{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.box-text-card::before{
     background: linear-gradient(#183271, #020231);
+    color: white;
+    opacity: 0;
+}
+
+.box-text-card::after{
+    background-color: white;
+    opacity: 1;
+}
+
+.single-card:hover .box-text-card::after{
+    opacity: 0;
+}
+
+.single-card:hover .box-text-card::before{
+    opacity: 1;
+}
+
+.box-text-card *{
+    position: relative;
+    z-index: 1;
+}
+
+.single-card:hover .box-text-card{
     color: white;
 }
 

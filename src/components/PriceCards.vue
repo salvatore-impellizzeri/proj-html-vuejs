@@ -96,25 +96,46 @@ export default {
 
 <template>  
     <div class="row container-all-cards m-auto gap-3 justify-content-center">
+
+        <!-- CARD -->
+
         <div class="col-3 container-card p-5 text-center text-black" :class="{'rose-315 text-white': i === 1}" v-for="(card, i) in cards" :key="i">
+
+            <!-- BG PRICE -->
+
             <div class="bg-price">
                 {{ card.price }}
             </div>
-            <h2>
+
+            <!-- TITLE -->
+
+            <h2 :class="{'family': i === 1}">
                 {{ card.title }}
             </h2>
+
+            <!-- CARD DESCRIPTION -->
+
             <p class="mt-3 fw-medium">
                 {{ card.desc }}
             </p>
+
+            <!-- PRICE -->
+
             <div class="price-container">
                 <span class="dollar fw-medium">$</span>
                 <div class="price">
                     {{ card.price }}
                 </div>
             </div>
+
+            <!-- SUBSCRIPTION -->
+
             <div class="time fw-medium">
                 {{ card.time }}
             </div>
+
+            <!-- UTILITIES -->
+
             <div class="container-abilities mb-5">
                 <div v-for="(utility, index) in card.utilities" :key="index" class="mb-3">
                     <span class="fw-bold">
@@ -125,46 +146,51 @@ export default {
                     </span>
                 </div>
             </div>
+
+            <!-- BUTTON -->
+
             <button :class="{'white-button': i === 1, 'rose-button rose-button-top': i !== 1}">
                 <span class="fw-bold">Order Now</span>
                 <i class="fas fa-long-arrow-alt-right"></i> 
             </button>
+            
         </div>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .rose-315{
   background: linear-gradient(315deg, #F8626B, #B5246E);
 }
 
 .container-all-cards{
-    width: 80%;
+    width: 82%;
 
     .container-card{
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         background-color: white;
         border-radius: 30px;
         position: relative;
-        z-index: -2;
+        z-index: 0;
         overflow: hidden;
+        transition: all 0.1s ease-in-out;
         
         .bg-price{
-            color: rgba(211, 211, 211, 0.349);
+            color: rgba(151, 151, 151, 0.178);
             position: absolute;
-            top: -130px;
-            right: -30px;
+            top: -160px;
+            right: -40px;
             font-weight: bold;
             font-family: 'Open Sans';
-            font-size: 300px;
+            font-size: 350px;
             z-index: -1;
         }
 
         h2{
             font-weight: bold;
             letter-spacing: -2px;
-            font-size: 40px
+            font-size: 50px
         }
 
         p{
@@ -221,5 +247,9 @@ export default {
     }
 }
 
+.family{
+    font-family: 'Raleway' !important;
+    letter-spacing: -4px !important;
+}
 </style>
 

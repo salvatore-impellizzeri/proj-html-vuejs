@@ -24,7 +24,7 @@ export default {
         <span class="giant-text">
             <span class="fw-bold">{{ bold }}</span> {{ medium }}
         </span>
-        <p class="w-25 m-auto">
+        <p class="w-25 m-auto fw-medium">
             {{ smaller }}
         </p>
     </div>
@@ -42,7 +42,6 @@ export default {
       font-size: 50px;
       letter-spacing: -2px;
       font-family: 'Heebo', sans-serif;
-
     }
 }
 

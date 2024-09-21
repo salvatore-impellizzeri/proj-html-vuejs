@@ -20,6 +20,11 @@ body{
   max-height: 700px;
 }
 
+.bg-blue-315{
+  background: linear-gradient(315deg, #183271, #020230);
+  max-height: 700px;
+}
+
 .my-bg-white{
   background-color: white;
   padding: 80px 0 60px;
@@ -57,6 +62,9 @@ h3, .big-titles{
 
 /* BUTTONS */
 
+
+
+
   /* BLUE */
 
   .blue-button{
@@ -72,9 +80,13 @@ h3, .big-titles{
     box-shadow: 0 0 45px #b6246d91;
   }
 
+
+
+
   /* ROSE */
 
-  .rose-button{
+  .rose-button {
+    position: relative;
     color: white;
     border-radius: 30px;
     border: none;
@@ -82,12 +94,13 @@ h3, .big-titles{
     transition: all 0.2s ease-in-out;
     box-shadow: 0 0 30px #b6246d62;
   }
-  
-  .rose-button:hover{
+
+  .rose-button:hover {
     box-shadow: 0 0 45px #1caed791;
   }
-  
+
   .rose-button-no-shadow{
+    position: relative;
     color: white;
     border-radius: 30px;
     border: none;
@@ -95,50 +108,130 @@ h3, .big-titles{
     transition: all 0.2s ease-in-out;
   }
 
-  .rose-button-no-shadow{
-    background: linear-gradient(to right, #03A5D2, #213D82);
+  /* PSEUDO ELEMENTI */
+
+  .rose-button-normal::before, 
+  .rose-button-normal::after,
+  .rose-button-reverse::before,
+  .rose-button-reverse::after,
+  .rose-button-45::before,
+  .rose-button-45::after,
+  .rose-button-top::before,
+  .rose-button-top::after {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: opacity 0.2s ease-in-out;
   }
 
-.rose-button-normal{
-  background: linear-gradient(to left, #F8626B, #B5246E);
-}
+  .rose-button-normal::before {
+    background: linear-gradient(to right, #03A5D2, #213D82);
+    opacity: 1;
+  }
 
-.rose-button-normal:hover{
-  box-shadow: 0 0 45px #1caed791;
-  background: linear-gradient(to right, #03A5D2, #213D82);
-}
+  .rose-button-normal::after {
+    background: linear-gradient(to left, #F8626B, #B5246E);
+    opacity: 1;
+  }
 
-.rose-button-reverse{
-  background: linear-gradient(to right, #F8626B, #B5246E);
-}
+  .rose-button-reverse::after{
+    background: linear-gradient(to right, #F8626B, #B5246E);
+    opacity: 1;
+  }
 
-.rose-button-reverse:hover{
-  box-shadow: 0 0 45px #1caed791;
-  background: linear-gradient(to left, #03A5D2, #213D82);
-}
+  .rose-button-reverse::before{
+    background: linear-gradient(to left, #03A5D2, #213D82);
+    opacity: 1;
+  }
 
-.rose-button-45{
-  background: linear-gradient(-45deg, #F8626B, #B5246E);
-}
+  .rose-button-45::after{
+    background: linear-gradient(45deg, #F8626B, #B5246E);
+    opacity: 1;
+  }
 
-.rose-button-45:hover{
-  box-shadow: 0 0 45px #1caed791;
-  background: linear-gradient(125deg, #03A5D2, #213D82);
-}
+  .rose-button-45::before{
+    background: linear-gradient(45deg, #03A5D2, #213D82);
+    opacity: 1;
+  }
 
-.rose-button-top{
-  background: linear-gradient(to top, #F8626B, #B5246E);
-}
+  .rose-button-top::after{
+    background: linear-gradient(to top, #F8626B, #B5246E);
+    opacity: 1;
+  }
 
-.rose-button-top:hover{
-  background: linear-gradient(to bottom, #03A5D2, #213D82);
-}
+  .rose-button-top::before{
+    background: linear-gradient(to bottom, #03A5D2, #213D82);
+    opacity: 1;
+  }
 
-.white-button{
-  background-color: white !important;
-  color: #F8626B;
-  border-radius: 30px;
-  border: none;
-  padding: 9px 30px;
-  transition: all 0.2s ease-in-out;
-}
+  /* PSEUDO ELEMENTO HOVER */
+
+  .rose-button-normal:hover::after,
+  .rose-button-reverse:hover::after,
+  .rose-button-45:hover::after,
+  .rose-button-top:hover::after {
+    opacity: 0;
+  }
+
+
+
+
+  /* WHITE */
+
+  .white-button, .white-button-hover{
+    border-radius: 30px;
+    border: none;
+    padding: 9px 30px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .white-button{
+    background-color: white !important;
+    color: #F8626B;
+  }
+
+  .white-button-hover{
+    position: relative;
+    padding: 13px 46px;
+  }
+
+  /* PSEUDO ELEMENTO */
+
+  .white-button-hover::after,
+  .white-button-hover::before{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .white-button-hover::before{
+    background: linear-gradient(to top, #F8626B, #B5246E);
+    opacity: 1;
+  }
+
+  .white-button-hover::after{
+    background-color: white;
+    opacity: 1;
+  }
+
+  /* PSEUDO ELEMENTO HOVER */
+
+  .white-button-hover:hover::after{
+    opacity: 0;
+  }
+

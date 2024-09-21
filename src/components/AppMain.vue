@@ -1,4 +1,5 @@
 <script>
+import SectionBlog from './SectionBlog.vue';
 import SectionPortfolio from './SectionPortfolio.vue';
 import SectionPrice from './SectionPrice.vue';
 import SectionService from './SectionService.vue';
@@ -16,6 +17,7 @@ export default {
     SectionStrategy,
     SectionPortfolio,
     SectionPrice,
+    SectionBlog,
   }
 }
 </script>
@@ -33,6 +35,9 @@ export default {
     </div>
     <div class="bg-blue-right pb-0 index">
       <SectionPrice />
+    </div>
+    <div>
+      <SectionBlog />
     </div>
   </div>
 </template>
