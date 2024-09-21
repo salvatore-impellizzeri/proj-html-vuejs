@@ -60,7 +60,9 @@ export default {
 
             <!-- SIGN IN BUTTON -->
               <button class="blue-button ms-5">
+                <span>
                   Sign In
+                </span>
               </button>
               
         </div>

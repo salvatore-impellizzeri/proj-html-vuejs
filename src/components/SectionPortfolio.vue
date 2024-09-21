@@ -40,7 +40,9 @@ export default {
           <span class="arrow">&LeftArrow;</span>
         </button>
         <button class="button-carousel-right">
-          <span class="arrow">&RightArrow;</span>
+          <span class="arrow">
+            &RightArrow;
+          </span>
         </button>
       </div>
     </div>

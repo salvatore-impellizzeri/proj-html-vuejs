@@ -52,7 +52,7 @@ export const store = reactive({
     
     titles:[
         {
-            red: "OurServices",
+            red: "Our Services",
             bigger:{
                 bold: "What",
                 medium: "We Do",

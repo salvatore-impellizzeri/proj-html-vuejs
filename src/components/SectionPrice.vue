@@ -39,13 +39,8 @@ export default {
 <style lang="scss" scoped>
 
 .rose-button{
-  border-radius: 30px;
   padding: 15px 50px;
-  box-shadow: 0 0 45px #b6246d91;
 }
 
-.rose-button:hover{
-  box-shadow: 0 0 45px #1caed791;
-}
 
 </style>

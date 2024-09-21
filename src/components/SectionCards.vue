@@ -53,8 +53,10 @@ export default {
 
         <!-- BUTTON -->
 
-        <button class="arrow-button rose-button-normal">
-            <i class="fa-solid fa-arrow-right"></i>
+        <button class="arrow-button rose-button rose-button-normal">
+            <span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
         </button>
         
     </div>
@@ -126,9 +128,6 @@ export default {
 
 .box-text-card::after,
 .box-text-card::before{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
     content: '';
     position: absolute;
     top: 0;

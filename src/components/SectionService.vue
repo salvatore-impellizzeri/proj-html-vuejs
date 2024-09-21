@@ -38,7 +38,11 @@ export default {
     <!-- BUTTON -->
 
     <div class="w-100 d-flex justify-content-center mb-4">
-      <button class="rose-button rose-button-45 justify-content-center">View All Services</button>
+      <button class="rose-button rose-button-315 justify-content-center">
+        <span>
+          View All Services
+        </span>
+      </button>
     </div>
     
   </div>
@@ -47,13 +51,7 @@ export default {
 <style lang="scss" scoped>
 
 .rose-button{
-  border-radius: 30px;
   padding: 15px 50px;
-  box-shadow: 0 0 45px #b6246d91;
-}
-
-.rose-button:hover{
-  box-shadow: 0 0 45px #1caed791;
 }
 
 </style>

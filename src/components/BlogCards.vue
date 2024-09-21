@@ -55,7 +55,9 @@ export default {
         </div>
         <div>
             <button class="white-button-hover">
-                Read More
+                <span>
+                    Read More
+                </span>
             </button>
         </div>
     </div>

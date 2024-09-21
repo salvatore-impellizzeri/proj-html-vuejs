@@ -15,8 +15,16 @@ export default {
 <template> 
   <div>
     <div class="d-flex gap-3">
-        <button class="rose-button-normal rose-button">Try It Now</button>
-        <button class="blue-button">Explore More</button>
+        <button class="rose-button-normal rose-button">
+          <span>
+            Try It Now
+          </span>
+        </button>
+        <button class="blue-button">
+          <span>
+            Explore More
+          </span>
+        </button>
     </div>
   </div>
 </template>
