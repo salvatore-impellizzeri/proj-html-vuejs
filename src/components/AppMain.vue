@@ -1,4 +1,5 @@
 <script>
+import AppFooter from './AppFooter.vue';
 import SectionBlog from './SectionBlog.vue';
 import SectionPortfolio from './SectionPortfolio.vue';
 import SectionPrice from './SectionPrice.vue';
@@ -20,6 +21,7 @@ export default {
     SectionPrice,
     SectionBlog,
     SectionTestimonial,
+    AppFooter,
   }
 }
 </script>
@@ -43,6 +45,9 @@ export default {
     </div>
     <div class="my-bg-white debug">
       <SectionTestimonial />
+    </div>
+    <div class="my-bg-blue">
+      <AppFooter />
     </div>
   </div>
 </template>

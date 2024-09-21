@@ -70,7 +70,7 @@ export default {
 <style lang="scss" scoped>
 
 .container-section{
-  padding-bottom: 250px;
+  padding-bottom: 200px;
 }
 
 .clients{
@@ -78,7 +78,7 @@ export default {
 }
 
 .cards{
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 </style>
